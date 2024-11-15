@@ -1,0 +1,211 @@
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Space Grotesk", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  min-height: 100vh;
+  width: 100vw;
+}
+@media (min-width: 100px) and (max-width: 1024px) {
+  .main {
+    grid-template-columns: none;
+    grid-template-rows: 30% 70%;
+    gap: 40px 0px;
+  }
+}
+.main__card__section {
+  background-image: url(../images/bg-main-desktop.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px 0px;
+}
+@media (min-width: 100px) and (max-width: 1024px) {
+  .main__card__section {
+    background-image: url(../images/bg-main-mobile.png);
+    flex-direction: column-reverse;
+  }
+}
+.main__card__section--front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 30%;
+  width: 100%;
+}
+@media (min-width: 100px) and (max-width: 1024px) {
+  .main__card__section--front {
+    width: 70%;
+    bottom: 5%;
+    left: -10%;
+    z-index: 1;
+  }
+}
+.main__card__section--front .personal-icon {
+  position: absolute;
+  width: 70px;
+  top: 20px;
+  left: 30px;
+}
+@media (max-width: 600px) {
+  .main__card__section--front .personal-icon {
+    font-size: 12px;
+    left: 20px;
+    width: 50px;
+  }
+}
+.main__card__section--front .card-number {
+  position: absolute;
+  bottom: 50px;
+  font-size: 16px;
+  letter-spacing: 5px;
+  color: hsl(0, 0%, 100%);
+  left: 30px;
+}
+@media (max-width: 600px) {
+  .main__card__section--front .card-number {
+    font-size: 12px;
+    left: 20px;
+  }
+}
+.main__card__section--front .card-name {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  color: hsl(0, 0%, 100%);
+}
+@media (max-width: 600px) {
+  .main__card__section--front .card-name {
+    font-size: 12px;
+    left: 20px;
+  }
+}
+.main__card__section--front .card-date {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  color: hsl(0, 0%, 100%);
+}
+@media (max-width: 600px) {
+  .main__card__section--front .card-date {
+    font-size: 12px;
+  }
+}
+.main__card__section--front img {
+  width: 100%;
+}
+.main__card__section--back {
+  width: 100%;
+  left: 50%;
+  position: relative;
+}
+@media (min-width: 100px) and (max-width: 1024px) {
+  .main__card__section--back {
+    left: 5%;
+    width: 70%;
+    top: 40%;
+    z-index: 0;
+  }
+}
+.main__card__section--back img {
+  width: 100%;
+}
+.main__card__section--back .card-cvc {
+  position: absolute;
+  top: 38%;
+  right: 50px;
+  letter-spacing: 2px;
+  color: hsl(0, 0%, 100%);
+}
+@media (min-width: 100px) and (max-width: 1024px) {
+  .main__card__section--back .card-cvc {
+    right: 10%;
+    top: 41%;
+  }
+}
+@media (max-width: 600px) {
+  .main__card__section--back .card-cvc {
+    right: 10%;
+    top: 35%;
+  }
+}
+.main__details__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px 10px;
+  width: 100%;
+}
+.main__details__section input {
+  padding-left: 10px;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  outline: 1px solid hsl(279, 6%, 55%);
+  height: 30px;
+  border-radius: 5px;
+}
+.main__details__section input:focus {
+  outline: 2px solid hsl(249, 99%, 64%);
+}
+.main__details__section label {
+  display: inline;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.main__details__section--name-num {
+  display: flex;
+  flex-direction: column;
+}
+.main__details__section--name-num input {
+  width: 300px;
+}
+.main__details__section--date {
+  display: flex;
+  gap: 0px 15px;
+}
+.main__details__section--date--my label {
+  display: block;
+}
+.main__details__section--date--my input {
+  margin-right: 5px;
+  width: 50px;
+  margin-top: 5px;
+}
+.main__details__section--date--cvc label {
+  display: block;
+}
+.main__details__section--date--cvc input {
+  width: 150px;
+  margin-top: 5px;
+}
+.main__details__section button {
+  width: 320px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}/*# sourceMappingURL=main.css.map */

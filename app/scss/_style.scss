@@ -30,25 +30,38 @@ body {
       background-image: url(../images/bg-main-mobile.png);
       flex-direction: column-reverse;
     }
-    gap: 20px 0px;
+    @include ultra-large-screen {
+      gap: 20px 0px;
+    }
+    @include extra-large-screen {
+      gap: 20px 0px;
+    }
     &--front {
+      max-width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
+      left: 30%;
+      width: 100%;
       @include large-screen-down {
         width: 70%;
         bottom: 5%;
         left: -10%;
         z-index: 1;
+        top: 5%;
       }
-      left: 30%;
-      width: 100%;
+      @include small-screen {
+        top: 15%;
+      }
       .personal-icon {
         position: absolute;
         width: 70px;
         top: 20px;
-        left: 30px;
+        left: 20px;
+        @include extra-large-screen {
+          left: 20px;
+        }
         @include small-screen {
           font-size: 12px;
           left: 20px;
@@ -58,22 +71,51 @@ body {
       .card-number {
         position: absolute;
         bottom: 50px;
-        font-size: 16px;
+        font-size: 12px;
         letter-spacing: 5px;
         color: $background-color;
-        left: 30px;
-        @include small-screen {
-          font-size: 12px;
+        margin: 0;
+        min-width: 100%;
+        left: 20px;
+        @include ultra-large-screen {
+          font-size: 20px;
+          padding: 30px 0px;
+          left: 30px;
+        }
+
+        @include extra-large-screen {
+          font-size: 16px;
+          padding: 15px 0px;
           left: 20px;
+        }
+
+        @include large-screen {
+          font-size: 35px;
+          left: 20px;
+          padding: 35px 0px;
+        }
+
+        @include medium-screen {
+          font-size: 25px;
+          left: 20px;
+          padding: 35px 0px;
         }
       }
       .card-name {
         position: absolute;
         bottom: 10px;
-        left: 30px;
+        left: 20px;
+        font-size: 12px;
         color: $background-color;
-        @include small-screen {
-          font-size: 12px;
+        @include extra-large-screen {
+          left: 20px;
+        }
+        @include large-screen {
+          font-size: 18px;
+          left: 20px;
+        }
+        @include medium-screen {
+          font-size: 20px;
           left: 20px;
         }
       }
@@ -81,9 +123,13 @@ body {
         position: absolute;
         bottom: 10px;
         right: 30px;
+        font-size: 12px;
         color: $background-color;
-        @include small-screen {
-          font-size: 12px;
+        @include large-screen {
+          font-size: 18px;
+        }
+        @include medium-screen {
+          font-size: 20px;
         }
       }
       img {
@@ -105,17 +151,32 @@ body {
       }
       .card-cvc {
         position: absolute;
-        top: 38%;
-        right: 50px;
+        width: 100%;
+        top: 44%;
+        margin: 0;
         letter-spacing: 2px;
         color: $background-color;
-        @include large-screen-down {
+        text-align: end;
+        @include ultra-large-screen {
+          right: 45px;
+        }
+        @include extra-large-screen {
+          top: 42%;
+          right: 40px;
+        }
+        @include large-screen {
           right: 10%;
-          top: 41%;
+          top: 44%;
+          font-size: 25px;
+        }
+        @include medium-screen {
+          right: 10%;
+          top: 42%;
+          font-size: 25px;
         }
         @include small-screen {
           right: 10%;
-          top: 35%;
+          top: 40%;
         }
       }
     }
